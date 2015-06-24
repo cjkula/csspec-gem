@@ -9,7 +9,7 @@ describe CSSpec::Context do
     it "should accept a parent block" do
       document = CSSpec::Document.new('')
       parent_block = CSSpec::Block.new(CSSpec::Context.new(document), CSSpec::Offset.new(0, 0))
-      context = CSSpec::Context.new(document, parent_block)
+      context = CSSpec::Context.new(document, parent: parent_block)
       expect(context.parent_block).to eq parent_block
     end
     it "should accept a nil parent_block" do
